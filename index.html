@@ -1,96 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>landing page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+
 <style>
-    *{
-        border: none;
-        padding: 0px;
-        margin: 0px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    body{
-        width:100vw;
-        height:100vh;
-        background: #222222;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction:column;
-    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 70px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid #000;
+}
+
+.logo{
+    font-family: "Rubik Glitch", cursive;
+    font-size: 28px;
+    text-shadow: -3px 0px #c300ff, 2px 0px #00ff00;
+}
+
+header a{
+    font-size: large;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+header a:hover{
+    text-shadow: 1px 0px #00ff00,-2px 0px#c300ff;
+}
+
+/* HERO */
+.parte1{
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+    flex-wrap: wrap;
+}
+
+.text1 h1{
+    font-size: 36px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.text1 p{
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* BOTÕES */
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button{
+    background: #e0dddd;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: -2px -2px 1px rgb(195, 0, 255),
+                2px 2px 1px rgb(0, 255, 128);
+}
+
+.buttons button:hover{
+    transform: translateY(-3px);
+}
+
+/* IMAGEM */
+.parte1 img{
+    width: 280px;
+    border-radius: 12px;
+}
+
+/* SEGUNDA PARTE */
+.parte2{
+    width: 100%;
+    height: 50vh;
+    padding: 40px 20px;
+    background: #181818;
+    text-align: center;
+}
+
+.tags{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: #333;
+}
+
+.tags i{
+    color: #00ff88;
+}
+
+.parte2 h2{
+    margin-top: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px){
     .parte1{
-        background: #222222;
-        height:50vh; 
-        width: 100vw;
-    }
-    .parte2{
-        background: #181818;
-        height: 60vh;
-        width:100vw;
-    } 
-
-    .parte1, .parte1{
-        display: flex;
         flex-direction: column;
+        text-align: center;
+    }
+
+    .buttons{
         justify-content: center;
     }
-
-    button{
-        background: #808080;
-        width:100px;
-        margin:10px;
-    }
-    header{
-        display:flex;
-        flex-direction: row;
-    }
-    header > .logo{
-        font-family: "Rubik Glitch", system-ui;
-        color: #2cdd08;
-        text-shadow: 0px 0px 20px  #9b06c9  ;
-        font-size : 40px;
-        position: absolute;
-        left: 50px; 
-    }
-
+}
 </style>
+</head>
+
 <body>
-    <header>
-        <span class="logo"> pedro.dev_ </span>
-        <p>entrar em contato</p>
-    </header>
-    <section class="parte1">
 
+<header>
+    <span class="logo">pedro.dev_</span>
+    <a>Entrar em contato</a>
+</header>
 
-        <h1>transformo ideias em realidade na web</h1>
-        <p>sou um desenvolvedor especializzado em criar sites e aplicaçoes sob medida</p>
-        <div class="">
-            <button type="">veja meu trabalho</button>
-            <button type="">Saiba mais</button>
+<section class="parte1">
+
+    <div>
+        <div class="text1">
+            <h1>Transformo ideias em realidade na web</h1>
+            <p>Sou um desenvolvedor especializado em criar sites e aplicações sob medida</p>
         </div>
 
-    </section>
-    
-    <section class="parte2">
-    
-        <div class="tags eficiente">
-            <i>eficiente</i>
+        <div class="buttons">
+            <button>Ver meu trabalho</button>
+            <button>Saiba mais</button>
         </div>
-    
-        <div class="tags confiavel">
-            <i>confiavel</i>
-        </div>
-    
-        <div class="tags moderno">
-            <i>moderno</i>
-        </div>
-        
-        ultimos projetos 
-    
-    </section>
+    </div>
+
+    <img src="./107113002 (1).jpg" alt="Foto">
+
+</section>
+
+<section class="parte2">
+
+    <div class="tags"><i>eficiente</i></div>
+    <div class="tags"><i>confiável</i></div>
+    <div class="tags"><i>moderno</i></div>
+
+    <h2>Últimos projetos</h2>
+
+</section>
+
 </body>
 </html>
