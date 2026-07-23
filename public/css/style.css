@@ -1,0 +1,25 @@
+@import url("./sc.css");
+@import "tailwindcss";
+
+:root {
+  --background: #000;
+  --foreground: #00ff88;
+
+  --primary: #00ff88;
+  --secondary: #00ffff;
+  --accent: #ff00ff;
+  --card: rgba(0, 255, 136, 0.05);
+
+  --border: rgba(0, 255, 136, 0.2);
+  --input: rgba(0, 255, 136, 0.05);
+
+  --ring: #00ff88;
+  --radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
