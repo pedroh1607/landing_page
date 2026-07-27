@@ -1,5 +1,5 @@
-@import url("./sc.css");
 @import "tailwindcss";
+@import url("./sc.css");
 
 :root {
   --background: #000;
